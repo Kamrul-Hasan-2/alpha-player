@@ -17,7 +17,40 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Alpha Player'),
+          actions: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+          ],
           backgroundColor: Colors.teal[900],
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children:<Widget> [
+              const UserAccountsDrawerHeader
+                (accountName: Text("kamrul_02"),
+                  accountEmail: Text("hasankamrul@gmail.com")),
+              ListTile(
+                leading: Icon(Icons.folder),
+                title: Text("Folder"),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: Icon(Icons.playlist_add),
+                title: Text("Playlist"),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: Icon(Icons.download),
+                title: Text("Download"),
+                onTap: () {},
+              ),
+
+              ListTile(
+                leading: Icon(Icons.headset),
+                title: Text("Audio Music"),
+                onTap: () {},
+              ),
+            ],
+          ),
         ),
         body: MyPlayerPage(),
       ),
